@@ -23,6 +23,17 @@ const updateUI = data => {
         <span>&deg;C</span>
     </div>`;
 
+	//update the night/day & icon images
+	const iconSrc = `/img/icons/${w.WeatherIcon}.svg`;
+	icon.setAttribute('src', iconSrc);
+	let timeSrc = null;
+	if (w.IsDayTime) {
+		timeSrc = '/img/day.svg';
+	} else {
+		timeSrc = '/img/night.svg';
+	}
+	time.setAttribute('src', timeSrc);
+
 	//remove the d-none class if user Pressed Enter
 	if (card.classList.contains('d-none')) {
 		card.classList.remove('d-none');
