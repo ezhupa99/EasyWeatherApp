@@ -1,12 +1,18 @@
 //Interacting with DOM
 const cityForm = document.querySelector('form');
-
 const card = document.querySelector('.card');
 const details = document.querySelector('.details');
+const time = document.querySelector('img.time');
+const icon = document.querySelector('.icon img');
 
 const updateUI = data => {
-	const cd = data.cd;
-	const w = data.w;
+	//Instead of using this way - 2 lines
+	// const cd = data.cd;
+	// const w = data.w;
+
+	//will be using this neater way - one line
+	//Destructing Obj
+	const { cd, w } = data;
 
 	//update details template
 	details.innerHTML = `
