@@ -5,8 +5,8 @@ const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 
 const updateUI = data => {
-	// const cd = data.cd;
-	// const w = data.w;
+	const cd = data.cd;
+	const w = data.w;
 
 	//update details template
 	details.innerHTML = `
