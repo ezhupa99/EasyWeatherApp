@@ -1,0 +1,1 @@
+This app is built using AccuWeather API, Latest Bootstrap and also using the latest JS keywords async and await.
