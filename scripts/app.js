@@ -13,6 +13,7 @@ const updateUI = data => {
 	//will be using this neater way - one line
 	//Destructing Obj
 	const { cd, w } = data;
+	console.log(cd, w);
 
 	//update details template
 	details.innerHTML = `
@@ -24,13 +25,13 @@ const updateUI = data => {
     </div>`;
 
 	//update the night/day & icon images
-	const iconSrc = `/img/icons/${w.WeatherIcon}.svg`;
+	const iconSrc = `img/icons/${w.WeatherIcon}.svg`;
 	icon.setAttribute('src', iconSrc);
 	let timeSrc = null;
 	if (w.IsDayTime) {
-		timeSrc = '/img/day.svg';
+		timeSrc = 'img/day.svg';
 	} else {
-		timeSrc = '/img/night.svg';
+		timeSrc = 'img/night.svg';
 	}
 	time.setAttribute('src', timeSrc);
 
